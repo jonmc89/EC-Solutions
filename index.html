@@ -4,16 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <script
+      src="https://kit.fontawesome.com/d4691f768e.js"
+      crossorigin="anonymous"
+    ></script>
     <title>EC Solutions</title>
   </head>
   <body>
     <header>
-      <a href="#"
+      <a href="#heroSection"
         ><img class="header-logo" src="./images/Logo.jpg" alt="logo"
       /></a>
       <nav>
         <ul class="header-nav">
-          <li><a class="header-nav-link" href="#">Services</a></li>
+          <li>
+            <a class="header-nav-link" href="#servicesSection">Services</a>
+          </li>
           <li><a class="header-nav-link" href="#">Why Us</a></li>
           <li><a class="header-nav-link" href="#">Testimonials</a></li>
           <li><a class="header-nav-link" href="#">FAQ</a></li>
@@ -23,13 +29,13 @@
       </nav>
     </header>
     <main>
-      <section class="hero-section">
+      <section id="heroSection" class="hero-section">
         <div class="hero-text-content">
-          <p class="licensed">Licensed & Insured - Esher Surrey</p>
-          <p class="hero-text-main">
+          <p class="licensed">LICENSED & INSURED - ESHER SURREY</p>
+          <h1 class="hero-text-main">
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Corrupti,
             facilis.
-          </p>
+          </h1>
           <p class="hero-sub-text">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam
             consectetur tempora at tenetur alias delectus explicabo dicta ut
@@ -37,12 +43,73 @@
           </p>
           <div class="hero-call-to-action">
             <button class="hero-estimate-btn">Get a Free Estimate</button>
-            <button class="hero-services-btn">View Services</button>
+            <a class="hero-services-btn" href="#servicesSection">
+              View Services
+            </a>
           </div>
         </div>
         <div class="hero-img-container"></div>
       </section>
-      <section class="services-section"></section>
+      <section id="servicesSection" class="services-section">
+        <div class="services-text-container">
+          <p class="what-we-do">WHAT WE DO</p>
+          <h2 class="services-header">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+          </h2>
+          <p class="services-text-main">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim
+            quaerat, vel cum saepe minima possimus?
+          </p>
+        </div>
+        <div class="services-wrapper">
+          <div class="services-card-container">
+            <div class="services-card">
+              <div class="icon">
+                <i class="fa-solid fa-wrench"></i>
+              </div>
+              <h3>General Repairs</h3>
+              <p class="services-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                nulla?
+              </p>
+              <div class="services-card-img-container repairs"></div>
+            </div>
+            <div class="services-card">
+              <div class="icon">
+                <i class="fa-solid fa-paint-roller"></i>
+              </div>
+              <h3>Painting & Finishing</h3>
+              <p class="services-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                nulla?
+              </p>
+              <div class="services-card-img-container decorating"></div>
+            </div>
+            <div class="services-card">
+              <div class="icon">
+                <i class="fa-solid fa-shield"></i>
+              </div>
+              <h3>Seasonal Maintenance</h3>
+              <p class="services-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                nulla?
+              </p>
+              <div class="services-card-img-container seasonal"></div>
+            </div>
+            <div class="services-card">
+              <div class="icon">
+                <i class="fa-solid fa-tree"></i>
+              </div>
+              <h3>Carpentry & Trim</h3>
+              <p class="services-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Est,
+                nulla?
+              </p>
+              <div class="services-card-img-container carpentry"></div>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
   </body>
 </html>
