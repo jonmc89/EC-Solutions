@@ -24,12 +24,14 @@ body {
 
 header {
   display: flex;
+  position: fixed;
   justify-content: space-between;
   align-items: center;
   border-bottom: 0.1rem solid var(--silver);
+  background-color: var(--white);
   padding: 1rem 3rem;
+  width: 100%;
 }
-
 .header-logo {
   width: 10rem;
   height: auto;
@@ -65,4 +67,85 @@ header {
 
 .header-nav-btn:hover {
   background-color: var(--pacific-ocean);
+}
+
+/* Hero Section */
+
+.hero-section {
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  padding-top: 6.7rem;
+  height: 100vh;
+}
+
+.hero-text-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: left;
+  gap: 1rem;
+  padding: 5rem;
+}
+
+.hero-img-container {
+  background-color: var(--pacific-ocean);
+}
+
+.licensed {
+  color: var(--pacific-ocean);
+}
+
+.hero-text-main {
+  color: var(--gun-metal);
+  font-size: 3rem;
+}
+
+.hero-sub-text {
+  margin-block-end: 1rem;
+  color: var(--pacific-ocean);
+  line-height: 150%;
+}
+
+.hero-call-to-action {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hero-estimate-btn,
+.hero-services-btn {
+  width: 10rem;
+}
+
+.hero-estimate-btn {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--blue-slate);
+  padding: 1rem;
+  color: var(--white);
+}
+
+.hero-estimate-btn:hover {
+  background-color: var(--pacific-ocean);
+}
+
+.hero-services-btn {
+  transition:
+    background-color 0.2s ease-in-out,
+    color 0.2s ease-in-out;
+  cursor: pointer;
+  border: 0.1rem solid var(--silver);
+  border-radius: 0.5rem;
+  background-color: var(--white);
+  padding: 1rem;
+  color: var(--blue-slate);
+}
+
+.hero-services-btn:hover {
+  background-color: var(--gun-metal);
+  color: var(--white);
 }
