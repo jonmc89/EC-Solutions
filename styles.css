@@ -109,6 +109,10 @@ header {
   font-size: 3rem;
 }
 
+.hero-span {
+  color: var(--pacific-ocean);
+}
+
 .hero-sub-text {
   margin-block-end: 1rem;
   color: var(--pacific-ocean);
@@ -174,6 +178,10 @@ header {
   gap: 1rem;
   margin-block-end: 2rem;
   width: 30rem;
+}
+
+.services-text-main {
+  line-height: 150%;
 }
 
 .what-we-do,
@@ -292,4 +300,88 @@ header {
 
 .services-card:hover .carpentry {
   background-size: 120%;
+}
+
+/* Why Us Section */
+
+.why-us-section {
+  display: flex;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  background-color: var(--pacific-ocean);
+  height: 100vh;
+}
+
+.why-us-img-container {
+  background-image: url(./images/Why\ Us\ Image.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+}
+
+.why-us-text-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 8rem 3rem 0 0;
+}
+
+.why-ec {
+  color: var(--lighter-blue);
+}
+
+.why-us-main-text {
+  color: var(--white);
+  line-height: 150%;
+}
+
+.why-us-features-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.why-us-feature {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-radius: 0.5rem;
+  background-color: var(--lighter-blue);
+  padding: 1rem;
+}
+
+.why-us-icon {
+  display: flex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  background-color: var(--blue-slate);
+  width: 2rem;
+  height: 2rem;
+}
+
+.fa-user-group,
+.fa-clock,
+.fa-circle-check {
+  color: var(--white);
+}
+
+.why-us-header {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+h4 {
+  color: var(--blue-slate);
+}
+
+.feature-text p {
+  color: var(--gun-metal);
+  line-height: 150%;
 }
