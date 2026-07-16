@@ -68,6 +68,7 @@ header {
   background-color: var(--blue-slate);
   padding: 1rem;
   color: var(--white);
+  text-decoration: none;
 }
 
 .header-nav-btn:hover {
@@ -139,6 +140,9 @@ header {
   background-color: var(--blue-slate);
   padding: 1rem;
   color: var(--white);
+  font-size: 0.85rem;
+  text-align: center;
+  text-decoration: none;
 }
 
 .hero-estimate-btn:hover {
@@ -455,8 +459,53 @@ h4 {
 }
 
 .form-container {
+  border: 0.1rem solid var(--silver);
   border-radius: 0.5rem;
-  background-color: var(--pacific-ocean);
+  background-color: var(--lighter-blue);
+  padding: 3rem;
   width: 100%;
   min-height: 24rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-name-number {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.form-name-number input {
+  width: 100%;
+}
+
+.form-name,
+.form-number {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+}
+
+input,
+select,
+textarea {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 1rem;
+}
+
+.form-submit {
+  transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
+  background-color: var(--blue-slate);
+  color: var(--white);
+}
+
+.form-submit:hover {
+  background-color: var(--pacific-ocean);
 }

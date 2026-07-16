@@ -22,7 +22,11 @@
           </li>
           <li><a class="header-nav-link" href="#whyUsSection">Why Us</a></li>
           <li><a class="header-nav-link" href="#contactSection">Contact</a></li>
-          <li><button class="header-nav-btn">Get a Free Estimate</button></li>
+          <li>
+            <a href="#contactSection" class="header-nav-btn"
+              >Get a Free Estimate</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
@@ -40,7 +44,9 @@
             libero modi doloribus maiores, in repellat atque?
           </p>
           <div class="hero-call-to-action">
-            <button class="hero-estimate-btn">Get a Free Estimate</button>
+            <a href="#contactSection" class="hero-estimate-btn"
+              >Get a Free Estimate</a
+            >
             <a class="hero-services-btn" href="#servicesSection">
               View Services
             </a>
@@ -192,28 +198,41 @@
           </div>
           <div class="contact-us-form">
             <div class="form-container">
-              <form action="">
+              <form id="form" action="">
                 <div class="form-name-number">
-                  <input
-                    type="text"
-                    id="name"
-                    aria-label="name"
-                    placeholder="Name"
-                  />
-                  <input
-                    type="number"
-                    id="number"
-                    aria-label="number"
-                    placeholder="Contact number"
-                  />
+                  <div class="form-name">
+                    <label for="name">Your name</label>
+                    <input
+                      type="text"
+                      id="name"
+                      aria-label="name"
+                      placeholder="Jane Smith"
+                    />
+                  </div>
+                  <div class="form-number">
+                    <label for="number">Contact number</label>
+                    <input
+                      type="text"
+                      id="number"
+                      aria-label="number"
+                      placeholder="+44 1234 555 666"
+                    />
+                  </div>
                 </div>
-                <input type="email" id="email" aria-label="email" />
+                <label for="email">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  aria-label="email"
+                  placeholder="jane@example.com"
+                />
+                <label for="services">Service Needed</label>
                 <select
                   name="service"
                   id="services"
                   placeholder="Please select"
                 >
-                  <option value="" selected></option>
+                  <option value="" selected>Select a service...</option>
                   <option value="General Repairs">General Repairs</option>
                   <option value="Painting & Finishing">
                     Painting & Finishing
@@ -225,12 +244,18 @@
                   <option value="Electical">Electrical</option>
                   <option value="Plumbing">Plumbing</option>
                 </select>
+                <label for="describe">Describe the work</label>
                 <textarea
                   name="describe"
                   id="describe"
-                  placeholder="Please describe the work that needs doing..."
+                  placeholder="Guve us a brief description of what needs to be done..."
                 ></textarea>
-                <input type="submit" name="submit" id="submit" />
+                <input
+                  class="form-submit"
+                  type="submit"
+                  name="submit"
+                  id="submit"
+                />
               </form>
             </div>
           </div>
