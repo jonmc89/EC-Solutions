@@ -402,7 +402,7 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 8rem 5rem;
+  padding: 4rem 5rem 0 5rem;
   width: 100%;
   height: 100%;
 }
@@ -508,4 +508,36 @@ textarea {
 
 .form-submit:hover {
   background-color: var(--pacific-ocean);
+}
+
+/* Footer */
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--blue-slate);
+  padding: 0.5rem 2rem;
+  color: var(--lighter-blue);
+}
+
+.footer-logo {
+  width: 5rem;
+  height: auto;
+}
+
+.footer-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+.footer-list-item a {
+  transition: color 0.2s ease-in-out;
+  color: var(--lighter-blue);
+  text-decoration: none;
+}
+
+.footer-list-item a:hover {
+  color: var(--silver);
 }
