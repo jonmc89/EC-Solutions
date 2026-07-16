@@ -25,6 +25,15 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.hidden {
+  opacity: 0;
+  transition: opacity 0.6s ease-out;
+}
+
+.show {
+  opacity: 1;
+}
+
 /* Header */
 
 header {
@@ -32,6 +41,7 @@ header {
   position: fixed;
   justify-content: space-between;
   align-items: center;
+  z-index: 999;
   border-bottom: 0.1rem solid var(--silver);
   background-color: var(--white);
   padding: 1rem 3rem;
@@ -451,6 +461,18 @@ h4 {
 .contact-us-main-text {
   color: var(--pacific-ocean);
   line-height: 150%;
+}
+
+.days-available,
+.sla {
+  color: var(--gun-metal);
+}
+
+.contact-number,
+.email {
+  width: 20rem;
+  color: var(--blue-slate);
+  text-decoration: none;
 }
 
 .fa-phone,

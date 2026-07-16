@@ -4,10 +4,18 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
+    <link rel="icon" type="image/x-icon" href="./images/logo.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <script
       src="https://kit.fontawesome.com/d4691f768e.js"
       crossorigin="anonymous"
     ></script>
+    <script src="script.js" defer></script>
     <title>EC Solutions</title>
   </head>
   <body>
@@ -31,7 +39,7 @@
       </nav>
     </header>
     <main>
-      <section id="heroSection" class="hero-section">
+      <section id="heroSection" class="hero-section hidden">
         <div class="hero-text-content">
           <p class="licensed">LICENSED & INSURED - ESHER SURREY</p>
           <h1 class="hero-text-main">
@@ -54,7 +62,7 @@
         </div>
         <div class="hero-img-container"></div>
       </section>
-      <section id="servicesSection" class="services-section">
+      <section id="servicesSection" class="services-section hidden">
         <div class="services-text-container">
           <p class="what-we-do">WHAT WE DO</p>
           <h2 class="services-header">Four services. One call.</h2>
@@ -112,7 +120,7 @@
           </div>
         </div>
       </section>
-      <section id="whyUsSection" class="why-us-section">
+      <section id="whyUsSection" class="why-us-section hidden">
         <div class="why-us-img-container"></div>
         <div class="why-us-text-container">
           <p class="why-ec">WHY EC SOLUTIONS</p>
@@ -167,7 +175,7 @@
           </div>
         </div>
       </section>
-      <section id="contactSection" class="contact-section">
+      <section id="contactSection" class="contact-section hidden">
         <div class="contact-us-grid-container">
           <div class="contact-us-text-container">
             <p class="get-in-touch">GET IN TOUCH</p>
@@ -178,22 +186,28 @@
               phone.
             </p>
             <div class="contact-info-container">
-              <div class="contact-item">
-                <div class="conact-icon"><i class="fa-solid fa-phone"></i></div>
-                <div class="contact-text-container">
-                  <p class="contact-text">+44 12345 678 999</p>
-                  <p>Monday - Friday 09:00-17:00</p>
+              <a class="contact-number" href="tel:4412345678999">
+                <div class="contact-item">
+                  <div class="conact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                  </div>
+                  <div class="contact-text-container">
+                    <p class="contact-text">+44 12345 678 999</p>
+                    <p class="days-available">Monday - Friday 09:00-17:00</p>
+                  </div>
                 </div>
-              </div>
-              <div class="contact-item">
-                <div class="conact-icon">
-                  <i class="fa-solid fa-envelope"></i>
+              </a>
+              <a class="email" href="mailto:ecsolutions@gmail.com">
+                <div class="contact-item">
+                  <div class="conact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                  </div>
+                  <div class="contact-text-container">
+                    <p class="contact-text">ecsolutions@gmail.com</p>
+                    <p class="sla">We aim to reply within 24 hours</p>
+                  </div>
                 </div>
-                <div class="contact-text-container">
-                  <p class="contact-text">ecsolutions@gmail.com</p>
-                  <p>We aim to reply within 24 hours</p>
-                </div>
-              </div>
+              </a>
             </div>
           </div>
           <div class="contact-us-form">
