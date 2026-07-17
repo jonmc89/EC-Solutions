@@ -547,6 +547,18 @@ textarea {
   padding: 1rem;
 }
 
+input:user-invalid,
+select:user-invalid,
+textarea:user-invalid {
+  border: 0.1rem solid red;
+}
+
+input:valid,
+select:valid,
+textarea:valid {
+  border: 0.1rem solid green;
+}
+
 .form-submit {
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;

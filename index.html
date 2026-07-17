@@ -15,6 +15,7 @@
       src="https://kit.fontawesome.com/d4691f768e.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="script.js" defer></script>
     <title>EC Solutions</title>
   </head>
@@ -205,15 +206,17 @@
           </div>
           <div class="contact-us-form">
             <div class="form-container">
-              <form id="form" action="">
+              <form id="form" action="" novalidate>
                 <div class="form-name-number">
                   <div class="form-name">
                     <label for="name">Your name</label>
                     <input
                       type="text"
                       id="name"
+                      name="name"
                       aria-label="name"
                       placeholder="Jane Smith"
+                      required
                     />
                   </div>
                   <div class="form-number">
@@ -221,8 +224,10 @@
                     <input
                       type="text"
                       id="number"
+                      name="number"
                       aria-label="number"
                       placeholder="+44 1234 555 666"
+                      required
                     />
                   </div>
                 </div>
@@ -230,16 +235,21 @@
                 <input
                   type="email"
                   id="email"
+                  name="email"
                   aria-label="email"
                   placeholder="jane@example.com"
+                  required
                 />
                 <label for="services">Service Needed</label>
                 <select
-                  name="service"
                   id="services"
                   placeholder="Please select"
+                  required
+                  name="services"
                 >
-                  <option value="" selected>Select a service...</option>
+                  <option value="" disabled selected>
+                    Select a service...
+                  </option>
                   <option value="General Repairs">General Repairs</option>
                   <option value="Painting & Finishing">
                     Painting & Finishing
@@ -250,12 +260,14 @@
                   <option value="Carpentry & Trim">Carpentry & Trim</option>
                   <option value="Electical">Electrical</option>
                   <option value="Plumbing">Plumbing</option>
+                  <option value="Other">Other</option>
                 </select>
                 <label for="describe">Describe the work</label>
                 <textarea
                   name="describe"
                   id="describe"
                   placeholder="Guve us a brief description of what needs to be done..."
+                  required
                 ></textarea>
                 <input
                   class="form-submit"
