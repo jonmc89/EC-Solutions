@@ -7,10 +7,6 @@
     <link rel="icon" type="image/x-icon" href="./images/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
-      rel="stylesheet"
-    />
     <script
       src="https://kit.fontawesome.com/d4691f768e.js"
       crossorigin="anonymous"
@@ -206,7 +202,7 @@
           </div>
           <div class="contact-us-form">
             <div class="form-container">
-              <form id="form" novalidate>
+              <form id="form">
                 <div class="form-name-number">
                   <div class="form-name">
                     <label for="name">Your name</label>
@@ -217,6 +213,7 @@
                       aria-label="name"
                       placeholder="Jane Smith"
                       required
+                      autocomplete="off"
                     />
                   </div>
                   <div class="form-number">
@@ -228,6 +225,7 @@
                       aria-label="number"
                       placeholder="+44 1234 555 666"
                       required
+                      autocomplete="off"
                     />
                   </div>
                 </div>
@@ -239,6 +237,8 @@
                   aria-label="email"
                   placeholder="jane@example.com"
                   required
+                  autocomplete="off"
+                  maxlength="30"
                 />
                 <label for="services">Service Needed</label>
                 <select id="services" required name="services">
@@ -263,6 +263,8 @@
                   id="describe"
                   placeholder="Give us a brief description of what needs to be done..."
                   required
+                  autocomplete="off"
+                  maxlength="300"
                 ></textarea>
                 <input
                   class="form-submit"

@@ -24,7 +24,13 @@ const submitBtn = document.getElementById('submit');
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
 
-  console.log('Form submitted');
+  if (!form.checkValidity()) {
+    form.reportValidity();
+    return;
+  }
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = 'Sending...';
 
   const formData = new FormData(form);
 
@@ -35,8 +41,6 @@ form.addEventListener('submit', async (event) => {
     service: formData.get('services'),
     description: formData.get('describe'),
   };
-
-  console.log(data);
 
   try {
     await emailjs.send('service_g5pb5l9', 'template_5qkj1bi', data);

@@ -14,6 +14,30 @@
   --blue-slate: #0d4771;
 }
 
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/dm-sans-v17-latin-regular.woff2') format('woff2');
+  font-family: 'DM Sans';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/dm-mono-v16-latin-regular.woff2') format('woff2');
+  font-family: 'DM Mono';
+  font-display: swap;
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  src: url('fonts/playfair-display-v40-latin-regular.woff2') format('woff2');
+  font-family: 'Playfair Display';
+  font-display: swap;
+}
+
 /* || Main Styles */
 
 html {
@@ -550,6 +574,12 @@ textarea {
   padding: 1rem;
 }
 
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
 input:user-invalid,
 select:user-invalid,
 textarea:user-invalid {
@@ -698,5 +728,13 @@ footer {
 
   .form-name-number {
     flex-direction: row;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+
+  .footer-list {
+    display: flex;
   }
 }
