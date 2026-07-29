@@ -46,6 +46,7 @@ html {
 
 body {
   background-color: var(--white);
+  min-width: 24rem;
   overflow-x: hidden;
   font-family: 'DM Sans', Arial, Helvetica, sans-serif;
 }
@@ -74,7 +75,7 @@ body {
 .services-header,
 .contact-header {
   font-size: 2em;
-  font-family: 'Playfair Display';
+  font-family: 'Playfair Display', Arial, Helvetica, sans-serif;
 }
 
 input,
@@ -140,7 +141,7 @@ header {
   display: flex;
   flex-direction: column;
   margin-bottom: 2rem;
-  padding-top: 8rem;
+  padding-top: 6rem;
   width: 100%;
   height: auto;
 }
@@ -168,6 +169,7 @@ header {
 }
 
 .hero-text-main {
+  max-width: 115ch;
   color: var(--gun-metal);
   font-size: 2.2rem;
 }
@@ -178,6 +180,7 @@ header {
 
 .hero-sub-text {
   margin-block-end: 1rem;
+  max-width: 50ch;
   color: var(--pacific-ocean);
   line-height: 170%;
 }
@@ -237,7 +240,9 @@ header {
 .services-section {
   display: flex;
   flex-direction: column;
-  height: auto;
+  padding-top: 0;
+  padding-bottom: 3rem;
+  min-height: 100vh;
 }
 
 .services-text-container {
@@ -249,6 +254,7 @@ header {
 }
 
 .services-text-main {
+  max-width: 50ch;
   line-height: 150%;
 }
 
@@ -273,6 +279,7 @@ header {
   display: flex;
   column-gap: 3rem;
   flex-direction: column;
+  width: 100%;
 }
 
 .services-card {
@@ -282,8 +289,8 @@ header {
   transition: background-color 0.2s ease-in-out;
   border-radius: 0.5rem;
   padding: 1rem;
-  width: 18rem;
-  height: 25rem;
+  width: 100%;
+  height: auto;
 }
 
 .services-card:hover {
@@ -375,13 +382,11 @@ header {
 /* Why Us Section */
 
 .why-us-section {
-  display: flex;
-  flex-direction: column-reverse;
+  display: grid;
   justify-content: center;
   align-items: center;
   background-color: var(--pacific-ocean);
-  padding: 4rem 2rem;
-  height: 100%;
+  min-height: 100%;
 }
 
 .why-us-img-container {
@@ -389,12 +394,15 @@ header {
   background-image: url(./images/Why\ Us\ Image.jpg);
   background-position: center;
   background-size: cover;
+  height: 100%;
 }
 
 .why-us-text-container {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 3rem;
+  margin-block-end: 2rem;
+  padding: 3rem 2rem;
 }
 
 .why-ec {
@@ -402,6 +410,7 @@ header {
 }
 
 .why-us-main-text {
+  max-width: 50ch;
   color: var(--white);
   line-height: 170%;
 }
@@ -460,7 +469,7 @@ h4 {
   justify-content: center;
   align-items: center;
   gap: 2rem;
-  padding: 2rem 0;
+  padding: 3rem 0;
   width: 100%;
   height: auto;
 }
@@ -535,7 +544,7 @@ h4 {
   border: 0.1rem solid var(--silver);
   border-radius: 0.5rem;
   background-color: var(--lighter-blue);
-  padding: 0 1rem;
+  padding:;
   width: 100%;
 }
 
@@ -543,7 +552,7 @@ form {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  padding: 1rem;
+  padding: 1.5rem;
   width: 100%;
 }
 
@@ -644,12 +653,24 @@ footer {
   .header-nav {
     display: flex;
   }
+  .hero-section {
+    height: 100vh;
+  }
   .hero-call-to-action {
     align-items: flex-start;
   }
 
+  .hero-img-container {
+    height: 100%;
+  }
+
   .services-section {
-    padding: 2rem 0;
+    display: grid;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr;
+    align-content: center;
+    padding: 6rem 2rem 3rem 2rem;
+    min-height: 100vh;
   }
 
   .services-card-container {
@@ -667,29 +688,48 @@ footer {
     flex-direction: row;
     justify-content: center;
   }
+
+  .why-us-section {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: 1fr;
+    padding: 2rem;
+    height: 100vh;
+  }
+
+  .why-us-text-container {
+    padding-top: 8rem;
+  }
+
+  .contact-section {
+    padding-top: 4rem;
+  }
 }
 
 @media screen and (min-width: 90rem) {
+  main {
+    margin-inline: auto;
+    width: min(100% - 6rem, 90rem);
+  }
+
+  header,
+  footer {
+    padding: 1rem 15rem;
+  }
+
   .hero-section {
     display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
-    padding-top: 6rem;
-    height: 100vh;
   }
 
-  .hero-text-content {
-    justify-content: flex-start;
-    padding: 8rem 2rem 0 2rem;
+  .hero-text-main {
+    margin-block-end: 2rem;
+    width: 15ch;
   }
 
-  .hero-img-container {
-    height: 100vh;
-  }
-
-  .services-section {
-    padding-top: 8rem;
-    height: 100vh;
+  .hero-call-to-action {
+    flex-direction: row;
   }
 
   .services-card-container {
@@ -698,43 +738,22 @@ footer {
   }
 
   .why-us-section {
-    display: grid;
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
     padding: 0;
-    height: 100vh;
   }
 
   .why-us-img-container {
     display: block;
+    grid-row: 1;
+    border-radius: 0;
+    background-image: url(./images/Why\ Us\ Image.jpg);
     height: 100%;
-  }
-
-  .why-us-text-container {
-    padding: 2rem;
   }
 
   .contact-us-grid-container {
     display: grid;
-    grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
-    padding: 5rem 0 2rem 0;
-  }
-
-  .contact-info-container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .form-name-number {
-    flex-direction: row;
-  }
-
-  footer {
-    font-size: 1rem;
-  }
-
-  .footer-list {
-    display: flex;
+    grid-row: 1fr;
   }
 }
