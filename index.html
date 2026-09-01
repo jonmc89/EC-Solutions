@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.min.css" />
+    <link rel="stylesheet" href="./styles.css" />
     <link rel="icon" type="image/x-icon" href="./images/logo.svg" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -16,13 +16,14 @@
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
       defer
     ></script>
-    <script src="script.min.js" defer></script>
+    <script src="./script.js" defer></script>
     <title>EC Solutions</title>
   </head>
   <body>
-    <header>
+    <header id="header">
       <a href="#heroSection"
         ><img
+          id="headerLogo"
           class="header-logo"
           src="./images/Logo.jpg"
           alt="logo"
@@ -43,11 +44,10 @@
         </ul>
       </nav>
     </header>
-
     <main>
-      <section id="heroSection" class="hero-section hidden">
+      <section id="heroSection" class="hero-section">
         <div class="hero-text-content">
-          <p class="licensed">- LICENSED & INSURED - ESHER SURREY</p>
+          <p class="licensed">- LICENSED & INSURED - LONDON</p>
           <h1 class="hero-text-main">
             Your home deserves
             <span class="hero-span">hands that know</span> what they're doing.
@@ -69,7 +69,7 @@
         </div>
         <div class="hero-img-container"></div>
       </section>
-      <section id="servicesSection" class="services-section hidden">
+      <section id="servicesSection" class="services-section">
         <div class="services-text-container">
           <p class="what-we-do">- WHAT WE DO</p>
           <h2 class="services-header">
@@ -126,7 +126,7 @@
           </div>
         </div>
       </section>
-      <section id="whyUsSection" class="why-us-section hidden">
+      <section id="whyUsSection" class="why-us-section">
         <div class="why-us-img-container"></div>
         <div class="why-us-text-container">
           <p class="why-ec">- WHY EC SOLUTIONS</p>
@@ -172,7 +172,7 @@
           </div>
         </div>
       </section>
-      <section id="contactSection" class="contact-section hidden">
+      <section id="contactSection" class="contact-section">
         <div class="contact-us-grid-container">
           <div class="contact-us-text-container">
             <p class="get-in-touch">- GET IN TOUCH</p>
@@ -185,24 +185,24 @@
               phone.
             </p>
             <div class="contact-info-container">
-              <a class="contact-number" href="tel:4412345678999">
+              <a class="contact-number" href="tel:447983711329">
                 <div class="contact-item">
                   <div class="conact-icon">
                     <i class="fa-solid fa-phone" loading="lazy"></i>
                   </div>
                   <div class="contact-text-container">
-                    <p class="contact-text">+44 12345 678 999</p>
+                    <p class="contact-text">07983711329</p>
                     <p class="days-available">Monday - Friday 09:00-17:00</p>
                   </div>
                 </div>
               </a>
-              <a class="email" href="mailto:ecsolutions@gmail.com">
+              <a class="email" href="mailto:junior@ecsolutioncjltd.co.uk ">
                 <div class="contact-item">
                   <div class="conact-icon">
                     <i class="fa-solid fa-envelope" loading="lazy"></i>
                   </div>
                   <div class="contact-text-container">
-                    <p class="contact-text">ecsolutions@gmail.com</p>
+                    <p class="contact-text">junior@ecsolutioncjltd.co.uk</p>
                     <p class="sla">We aim to reply within 24 hours</p>
                   </div>
                 </div>
@@ -296,19 +296,14 @@
           loading="lazy"
         />
       </a>
-      <p class="footer-text">
-        &copy; 2026 - United Kingdon - Esher - Licensed & Insured
-      </p>
-      <nav class="footer-nav">
-        <ul class="footer-list">
-          <li class="footer-list-item">
-            <a href="#servicesSection">Services</a>
-          </li>
-          <li class="footer-list-item"><a href="#whyUsSection">Why Us</a></li>
-          <li class="footer-list-item">
-            <a href="#contactSection">Contact</a>
-          </li>
-        </ul>
+      <div class="footer-text">
+        <p>EC Solution (CJ) Ltd</p>
+        <p>Registration Number: 09965281</p>
+        <p>Kendal Court, Bygrove Road, London</p>
+        <p>SW19 2BG</p>
+        <p>&copy; 2026 - United Kingdon</p>
+      </div>
+
       </nav>
     </footer>
   </body>

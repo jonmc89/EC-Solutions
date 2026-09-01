@@ -89,13 +89,22 @@ textarea {
 header {
   display: flex;
   position: fixed;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
+  opacity: 1;
   z-index: 999;
+  transition:
+    opacity 0.8s ease-in-out,
+    transform 0.8s ease-in-out;
   border-bottom: 0.1rem solid var(--silver);
   background-color: var(--white);
   padding: 1rem;
   width: 100%;
+}
+
+.header-hide {
+  transform: translateY(-200%);
+  opacity: 0;
 }
 .header-logo {
   width: 10rem;
@@ -242,7 +251,6 @@ header {
   flex-direction: column;
   padding-top: 0;
   padding-bottom: 3rem;
-  min-height: 100vh;
 }
 
 .services-text-container {
@@ -278,19 +286,22 @@ header {
 .services-card-container {
   display: flex;
   column-gap: 3rem;
+  row-gap: 2rem;
   flex-direction: column;
   width: 100%;
 }
 
 .services-card {
-  display: flex;
+  display: grid;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-columns: 1fr;
   flex-direction: column;
   gap: 1rem;
   transition: background-color 0.2s ease-in-out;
   border-radius: 0.5rem;
   padding: 1rem;
   width: 100%;
-  height: auto;
+  height: 25rem;
 }
 
 .services-card:hover {
@@ -386,7 +397,6 @@ header {
   justify-content: center;
   align-items: center;
   background-color: var(--pacific-ocean);
-  min-height: 100%;
 }
 
 .why-us-img-container {
@@ -618,9 +628,10 @@ footer {
   justify-content: space-between;
   align-items: center;
   background-color: var(--blue-slate);
-  padding: 0.5rem 1rem;
+  padding: 2rem;
+  width: 100%;
   color: var(--lighter-blue);
-  font-size: 0.6rem;
+  font-size: 0.5rem;
 }
 
 .footer-logo {
@@ -649,12 +660,20 @@ footer {
 /* Tablet View */
 
 @media screen and (min-width: 48rem) {
+  header {
+    justify-content: space-between;
+  }
   .header-nav {
     display: flex;
   }
   .hero-section {
     height: 100vh;
   }
+
+  .hero-text-content {
+    padding: 5rem;
+  }
+
   .hero-call-to-action {
     align-items: flex-start;
   }
@@ -669,7 +688,6 @@ footer {
     grid-template-columns: 1fr;
     align-content: center;
     padding: 6rem 2rem 3rem 2rem;
-    min-height: 100vh;
   }
 
   .services-card-container {
@@ -689,31 +707,24 @@ footer {
   }
 
   .why-us-section {
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: 1fr;
-    padding: 2rem;
-    height: 100vh;
-  }
-
-  .why-us-text-container {
-    padding-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
   .contact-section {
-    padding-top: 4rem;
+    padding-top: 1rem;
   }
 }
 
 @media screen and (min-width: 90rem) {
   main {
     margin-inline: auto;
-    width: min(100% - 6rem, 90rem);
   }
 
   header,
   footer {
-    padding: 0.5rem 15rem;
+    padding: 1rem 2rem;
   }
 
   .hero-section {
@@ -721,7 +732,6 @@ footer {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
     padding-top: 4rem;
-    height: 100vh;
   }
 
   .hero-text-main {
@@ -738,16 +748,16 @@ footer {
     grid-template-columns: repeat(4, 1fr);
   }
 
+  .services-card-img-container {
+    justify-self: end;
+  }
+
   .why-us-section {
-    grid-template-rows: 1fr;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     padding: 0;
-    height: 100vh;
   }
 
   .why-us-img-container {
-    display: block;
-    grid-row: 1;
     border-radius: 0;
     background-image: url(./images/Why\ Us\ Image.jpg);
     height: 100%;
@@ -756,12 +766,25 @@ footer {
   .contact-section {
     display: flex;
     align-items: center;
+    padding: 5rem;
     height: 100vh;
+  }
+
+  .contact-info-container {
+    align-self: flex-start;
   }
 
   .contact-us-grid-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-row: 1fr;
+  }
+
+  footer {
+    font-size: 1rem;
+  }
+
+  .footer-logo {
+    width: 10rem;
   }
 }

@@ -14,6 +14,25 @@ const observer = new IntersectionObserver((entries) => {
   });
 });
 
+// Header Hide
+
+const header = document.getElementById('header');
+const logo = document.getElementById('headerLogo');
+
+let lastScrollY = window.scrollY;
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY > lastScrollY && currentScrollY > 300) {
+    header.classList.add('header-hide');
+    logo.classList.add('header-logo-hide');
+  } else {
+    header.classList.remove('header-hide');
+  }
+  lastScrollY = currentScrollY;
+});
+
 // Form Actions
 
 document.querySelectorAll('.hidden').forEach((el) => observer.observe(el));
