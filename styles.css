@@ -165,7 +165,7 @@ header {
 }
 
 .hero-img-container {
-  background-image: url(./images/Hero\ Image.jpg);
+  background-image: url(./images/Hero\ Image.webp);
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -355,7 +355,7 @@ header {
 
 .decorating {
   transition: background-size 0.2s ease-in-out;
-  background-image: url(./images/Decorating\ Image.jpg);
+  background-image: url(./images/Decorating\ Image.webp);
   background-position: center;
   background-size: 100%;
 }
@@ -366,7 +366,7 @@ header {
 
 .repairs {
   transition: background-size 0.2s ease-in-out;
-  background-image: url(./images/Repairs\ Image.jpg);
+  background-image: url(./images/Repairs\ Image.webp);
   background-position: center;
   background-size: 100%;
 }
@@ -377,7 +377,7 @@ header {
 
 .seasonal {
   transition: background-size 0.2s ease-in-out;
-  background-image: url(./images/Seaonal\ Image.jpg);
+  background-image: url(./images/Seaonal\ Image.webp);
   background-position: center;
   background-size: 100%;
 }
@@ -388,7 +388,7 @@ header {
 
 .carpentry {
   transition: background-size 0.2s ease-in-out;
-  background-image: url(./images/Carpentry\ 2.jpg);
+  background-image: url(./images/Carpentry\ 2.webp);
   background-position: center;
   background-size: 100%;
 }
