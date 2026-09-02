@@ -2,18 +2,6 @@ emailjs.init({
   publicKey: 'rNNP43bprqgFovXvD',
 });
 
-// Page Load Animations
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach((entry) => {
-    if (entry.isIntersecting) {
-      entry.target.classList.add('show');
-    } else {
-      entry.target.classList.remove('show');
-    }
-  });
-});
-
 // Header Hide
 
 const header = document.getElementById('header');
