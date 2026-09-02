@@ -3,15 +3,35 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./styles.css" />
+    <link rel="stylesheet" href="./styles.min.css" />
     <link rel="icon" type="image/x-icon" href="./images/logo.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <script
-      src="https://kit.fontawesome.com/d4691f768e.js"
-      crossorigin="anonymous"
-      defer
-    ></script>
+    <link
+      rel="preload"
+      as="image"
+      href="./images/Hero Image.jpg"
+      fetchpriority="high"
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="./fonts/dm-mono-v16-latin-regular.woff2"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="./fonts/dm-sans-v17-latin-regular.woff2"
+      type="font/woff2"
+      crossorigin=""
+    />
+    <link
+      rel="preload"
+      as="font"
+      href="./fonts/playfair-display-v40-latin-regular.woff2"
+      type="font/woff2"
+      crossorigin=""
+    />
     <script
       src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
       defer
@@ -84,7 +104,11 @@
           <div class="services-card-container">
             <div class="services-card">
               <div class="icon">
-                <i class="fa-solid fa-wrench" loading="lazy"></i>
+                <img
+                  class="service-icon"
+                  src="./images/wrench-solid-full.svg"
+                  alt=""
+                />
               </div>
               <h3>General Repairs</h3>
               <p class="services-text">
@@ -94,7 +118,11 @@
             </div>
             <div class="services-card">
               <div class="icon">
-                <i class="fa-solid fa-paint-roller" loading="lazy"></i>
+                <img
+                  class="service-icon"
+                  src="./images/paint-roller-solid-full.svg"
+                  alt=""
+                />
               </div>
               <h3>Painting & Finishing</h3>
               <p class="services-text">
@@ -104,7 +132,11 @@
             </div>
             <div class="services-card">
               <div class="icon">
-                <i class="fa-solid fa-shield" loading="lazy"></i>
+                <img
+                  class="service-icon"
+                  src="./images/shield-halved-solid-full.svg"
+                  alt=""
+                />
               </div>
               <h3>Seasonal Maintenance</h3>
               <p class="services-text">
@@ -114,7 +146,11 @@
             </div>
             <div class="services-card">
               <div class="icon">
-                <i class="fa-solid fa-tree" loading="lazy"></i>
+                <img
+                  class="service-icon"
+                  src="./images/tree-solid-full.svg"
+                  alt=""
+                />
               </div>
               <h3>Carpentry & Trim</h3>
               <p class="services-text">
@@ -139,7 +175,7 @@
             <div class="why-us-feature">
               <div class="why-us-header">
                 <div class="why-us-icon">
-                  <i class="fa-regular fa-clock" loading="lazy"></i>
+                  <img src="./images/clock-solid-full.svg" alt="" />
                 </div>
                 <h4>On Time, every Time.</h4>
               </div>
@@ -150,7 +186,7 @@
             <div class="why-us-feature">
               <div class="why-us-header">
                 <div class="why-us-icon">
-                  <i class="fa-solid fa-user-group" loading="lazy"></i>
+                  <img src="./images/user-group-solid-full.svg" alt="" />
                 </div>
                 <h4>No subcontractor surprises.</h4>
               </div>
@@ -161,7 +197,7 @@
             <div class="why-us-feature">
               <div class="why-us-header">
                 <div class="why-us-icon">
-                  <i class="fa-regular fa-circle-check" loading="lazy"></i>
+                  <img src="./images/circle-check-solid-full.svg" alt="" />
                 </div>
                 <h4>Reliable Results, Guaranteed</h4>
               </div>
@@ -188,7 +224,11 @@
               <a class="contact-number" href="tel:447983711329">
                 <div class="contact-item">
                   <div class="conact-icon">
-                    <i class="fa-solid fa-phone" loading="lazy"></i>
+                    <img
+                      class="fa-phone"
+                      src="./images/phone-solid-full.svg"
+                      alt=""
+                    />
                   </div>
                   <div class="contact-text-container">
                     <p class="contact-text">07983711329</p>
@@ -199,7 +239,11 @@
               <a class="email" href="mailto:junior@ecsolutioncjltd.co.uk ">
                 <div class="contact-item">
                   <div class="conact-icon">
-                    <i class="fa-solid fa-envelope" loading="lazy"></i>
+                    <img
+                      class="fa-envelope"
+                      src="./images/envelope-solid-full.svg"
+                      alt=""
+                    />
                   </div>
                   <div class="contact-text-container">
                     <p class="contact-text">junior@ecsolutioncjltd.co.uk</p>
@@ -301,10 +345,8 @@
         <p>Registration Number: 09965281</p>
         <p>Kendal Court, Bygrove Road, London</p>
         <p>SW19 2BG</p>
-        <p>&copy; 2026 - United Kingdon</p>
+        <p>&copy; 2026 - United Kingdom</p>
       </div>
-
-      </nav>
     </footer>
   </body>
 </html>
