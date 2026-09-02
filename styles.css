@@ -165,7 +165,7 @@ header {
 }
 
 .hero-img-container {
-  background-image: url(./images/Hero\ Image.webp);
+  background-image: url(./images/HeroImage.webp);
   background-position: center;
   background-size: 100%;
   background-repeat: no-repeat;
@@ -777,7 +777,6 @@ footer {
 
   .why-us-img-container {
     border-radius: 0;
-    background-image: url(./images/Why\ Us\ Image.jpg);
     height: 100%;
   }
 
