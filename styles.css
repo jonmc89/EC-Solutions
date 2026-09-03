@@ -243,10 +243,49 @@ header {
   color: var(--white);
 }
 
+/* Section Patterns */
+
+.section-pattern-wrapper {
+  display: none;
+  position: absolute;
+  top: 5rem;
+  right: -5rem;
+  gap: 1rem;
+}
+
+.big-square,
+.small-square,
+.smaller-square {
+  border-radius: 2rem;
+}
+
+.smaller-square {
+  opacity: 0.1;
+  background-color: var(--blue-slate);
+  width: 2rem;
+  height: 3rem;
+}
+
+.big-square {
+  opacity: 0.3;
+  background-color: var(--blue-slate);
+  width: 30rem;
+  height: 20rem;
+}
+
+.small-square {
+  right: 0;
+  opacity: 0.2;
+  background-color: var(--blue-slate);
+  width: 5rem;
+  height: 10rem;
+}
+
 /* Services Section */
 
 .services-section {
   display: flex;
+  position: relative;
   flex-direction: column;
   padding-top: 0;
   padding-bottom: 3rem;
@@ -288,6 +327,7 @@ header {
   grid-template-columns: 1fr;
   column-gap: 3rem;
   row-gap: 2rem;
+  z-index: 99;
   width: 100%;
 }
 
@@ -354,6 +394,7 @@ header {
   display: grid;
   justify-content: center;
   align-items: center;
+  z-index: 99;
   background-color: var(--pacific-ocean);
 }
 
@@ -437,6 +478,45 @@ h4 {
 }
 
 /* Contact Section */
+
+.contact-section {
+  position: relative;
+}
+
+.contact-pattern-wrapper {
+  display: none;
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  align-items: end;
+  gap: 1rem;
+  z-index: -1;
+}
+
+.contact-pattern-square-big,
+.contact-pattern-square-small,
+.contact-pattern-square-smaller {
+  border-radius: 2rem;
+}
+
+.contact-pattern-square-big {
+  opacity: 0.8;
+  background-color: var(--lighter-blue);
+  width: 20rem;
+  height: 15rem;
+}
+.contact-pattern-square-small {
+  opacity: 0.5;
+  background-color: var(--lighter-blue);
+  width: 3rem;
+  height: 6rem;
+}
+.contact-pattern-square-smaller {
+  opacity: 0.3;
+  background-color: var(--lighter-blue);
+  width: 2rem;
+  height: 3.5rem;
+}
 
 .contact-us-grid-container {
   display: flex;
@@ -720,6 +800,10 @@ footer {
     flex-direction: row;
   }
 
+  .section-pattern-wrapper {
+    display: flex;
+  }
+
   .services-section {
     grid-template-columns: 1fr;
   }
@@ -741,6 +825,10 @@ footer {
     display: flex;
     align-items: center;
     height: auto;
+  }
+
+  .contact-pattern-wrapper {
+    display: flex;
   }
 
   .contact-info-container {
