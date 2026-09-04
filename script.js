@@ -67,3 +67,11 @@ form.addEventListener('submit', async (event) => {
     submitBtn.disabled = false;
   }
 });
+
+const themeSwitcher = document.getElementById('darkModeBtn');
+const body = document.getElementById('body');
+
+themeSwitcher.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  themeSwitcher.classList.toggle('sun');
+});

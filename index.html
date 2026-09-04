@@ -43,7 +43,7 @@
     <script src="./script.js" defer></script>
     <title>EC Solutions</title>
   </head>
-  <body>
+  <body id="body">
     <header id="header">
       <a href="#heroSection"
         ><img
@@ -54,8 +54,15 @@
       /></a>
       <nav>
         <ul class="header-nav">
+          <div id="darkModeBtn" class="theme-switcher"></div>
+
           <li>
-            <a class="header-nav-link" href="#servicesSection">Services</a>
+            <a
+              id="headerNavLink"
+              class="header-nav-link"
+              href="#servicesSection"
+              >Services</a
+            >
           </li>
           <li><a class="header-nav-link" href="#whyUsSection">Why Us</a></li>
           <li><a class="header-nav-link" href="#contactSection">Contact</a></li>
@@ -114,7 +121,9 @@
           <div class="services-card-container">
             <div class="services-card">
               <div class="service-card-text">
-                <h3>Commercial Building Services</h3>
+                <h3 id="whatWeDo" class="what-we-do">
+                  Commercial Building Services
+                </h3>
                 <ul class="services-list">
                   <li>
                     Electrical services (installation, testing, certification)
@@ -142,8 +151,8 @@
             way. We're committed to delivering dependable service, quality
             craftsmanship, and honest advice you can rely on every time.
           </p>
-          <div class="why-us-features-container">
-            <div class="why-us-feature feature-one">
+          <div id="whyUsSection" class="why-us-features-container">
+            <div id="whyUsFeature" class="why-us-feature feature-one">
               <div class="why-us-header">
                 <div class="why-us-icon">
                   <img src="./images/clock-solid-full.svg" alt="" />
@@ -154,7 +163,7 @@
                 <p>Dependable service with punctuality you can trust.</p>
               </div>
             </div>
-            <div class="why-us-feature feature-two">
+            <div id="whyUsFeature" class="why-us-feature feature-two">
               <div class="why-us-header">
                 <div class="why-us-icon">
                   <img src="./images/user-group-solid-full.svg" alt="" />
@@ -165,7 +174,7 @@
                 <p>No unexpected faces, just reliable workmanship.</p>
               </div>
             </div>
-            <div class="why-us-feature feature-three">
+            <div id="whyUsFeature" class="why-us-feature feature-three">
               <div class="why-us-header">
                 <div class="why-us-icon">
                   <img src="./images/circle-check-solid-full.svg" alt="" />
@@ -188,7 +197,7 @@
         <div class="contact-us-grid-container">
           <div class="contact-us-text-container">
             <p class="get-in-touch">- GET IN TOUCH</p>
-            <h2 class="contact-header">
+            <h2 id="letsTalk" class="contact-header">
               Let's talk about <span class="hero-span">your home</span>.
             </h2>
             <p class="contact-us-main-text">
@@ -234,7 +243,7 @@
               <form id="form">
                 <div class="form-name-number">
                   <div class="form-name">
-                    <label for="name">Your name</label>
+                    <label class="form-label" for="name">Your name</label>
                     <input
                       type="text"
                       id="name"
@@ -246,7 +255,9 @@
                     />
                   </div>
                   <div class="form-number">
-                    <label for="number">Contact number</label>
+                    <label class="form-label" for="number"
+                      >Contact number</label
+                    >
                     <input
                       type="text"
                       id="number"
@@ -258,7 +269,7 @@
                     />
                   </div>
                 </div>
-                <label for="email">Email</label>
+                <label class="form-label" for="email">Email</label>
                 <input
                   type="email"
                   id="email"
@@ -269,7 +280,7 @@
                   autocomplete="off"
                   maxlength="30"
                 />
-                <label for="services">Service Needed</label>
+                <label class="form-label" for="services">Service Needed</label>
                 <select id="services" required name="services">
                   <option value="" disabled selected>
                     Select a service...
@@ -286,7 +297,9 @@
                   <option value="Plumbing">Plumbing</option>
                   <option value="Other">Other</option>
                 </select>
-                <label for="describe">Describe the work</label>
+                <label class="form-label" for="describe"
+                  >Describe the work</label
+                >
                 <textarea
                   name="describe"
                   id="describe"

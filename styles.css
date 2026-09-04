@@ -51,13 +51,31 @@ body {
   font-family: 'DM Sans', Arial, Helvetica, sans-serif;
 }
 
-.hidden {
-  opacity: 0;
-  transition: opacity 0.6s ease-out;
+.dark-mode {
+  --gun-metal: #e6e8e9;
+  --white: #161a1c;
+  --silver: #aeb2ad;
+  --pacific-ocean: #7f9caf;
+  --lighter-blue: #252b2f;
+  --blue-slate: #72a9cc;
 }
 
-.show {
-  opacity: 1;
+.theme-switcher {
+  filter: brightness(0) saturate(100%) invert(19%) sepia(91%) saturate(916%)
+    hue-rotate(172deg) brightness(95%) contrast(92%);
+  transition:
+    background-image 0.2s ease-in-out,
+    filter 0.2s ease-in-out;
+  cursor: pointer;
+  background-image: url(./images/moon-solid-full.svg);
+  width: 2rem;
+  height: 2rem;
+}
+
+.sun {
+  filter: brightness(0) saturate(100%) invert(96%) sepia(8%) saturate(138%)
+    hue-rotate(162deg) brightness(99%) contrast(93%);
+  background-image: url(./images/sun-solid-full.svg);
 }
 
 /* Typography */
@@ -304,8 +322,8 @@ header {
   line-height: 150%;
 }
 
-.what-we-do,
-.services-text-main {
+.services-text-main,
+.what-we-do {
   color: var(--pacific-ocean);
 }
 
@@ -398,6 +416,10 @@ header {
   background-color: var(--pacific-ocean);
 }
 
+.why-us-section-dark {
+  background-color: var(--blue-slate);
+}
+
 .why-us-img-container {
   display: none;
   background-image: url(./images/Why\ Us\ Image.jpg);
@@ -437,6 +459,10 @@ header {
   border-radius: 0.5rem;
   background-color: var(--lighter-blue);
   padding: 1rem;
+}
+
+.why-us-feature-dark {
+  background-color: var(--pacific-ocean);
 }
 
 .why-us-icon {
@@ -564,7 +590,12 @@ h4 {
 }
 
 .contact-header {
+  color: var(--gun-metal);
   font-size: 2.5rem;
+}
+
+.form-label {
+  color: var(--gun-metal);
 }
 
 .contact-text-container {
