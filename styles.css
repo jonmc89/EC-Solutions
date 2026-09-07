@@ -40,6 +40,11 @@
 
 /* || Main Styles */
 
+html,
+body {
+  overflow-x: hidden;
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -402,8 +407,8 @@ header {
 }
 
 .services-card:hover .repairs {
-  filter: grayscale(0%);
-  background-size: 120%;
+  filter: grayscale(50%);
+  background-size: 110%;
 }
 
 /* Why Us Section */
@@ -420,19 +425,25 @@ header {
   background-color: var(--blue-slate);
 }
 
-.why-us-img-container {
-  display: none;
-  background-image: url(./images/Why\ Us\ Image.jpg);
-  background-position: center;
-  background-size: cover;
-}
-
 .why-us-text-container {
   display: flex;
   flex-direction: column;
   gap: 3rem;
   margin-block-end: 2rem;
   padding: 3rem 2rem;
+}
+
+.why-us-img {
+  display: none;
+  border-radius: 1rem;
+  width: 40rem;
+  height: 40rem;
+}
+
+.why-us-text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .why-ec {
@@ -692,6 +703,7 @@ textarea:valid {
 .form-submit {
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
+  border: none;
   background-color: var(--blue-slate);
   color: var(--white);
 }
@@ -822,6 +834,11 @@ footer {
     padding-top: 4rem;
   }
 
+  .hero-img-container {
+    border-top-left-radius: 1rem;
+    border-bottom-left-radius: 1rem;
+  }
+
   .hero-text-main {
     margin-block-end: 2rem;
     width: 15ch;
@@ -844,13 +861,45 @@ footer {
   }
 
   .why-us-section {
-    display: block;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
     padding: 6rem 2rem 3rem 2rem;
   }
-  .why-us-img-container {
-    border-radius: 0;
-    height: 100%;
+
+  .why-us-section:hover .why-us-img {
+    filter: grayscale(50%);
   }
+
+  .why-us-section:hover .why-us-img::before {
+    transform: scale(1.1);
+  }
+
+  .why-us-text-container {
+    justify-content: space-between;
+  }
+
+  .why-us-img {
+    display: block;
+    position: relative;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease-in-out;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .why-us-img::before {
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
+    inset: 0;
+    background-image: url(./images/Seaonal\ Image.webp);
+    background-position: center;
+    background-size: cover;
+    content: '';
+  }
+
+  /* Contact Section */
 
   .contact-section {
     display: flex;
