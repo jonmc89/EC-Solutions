@@ -78,8 +78,8 @@ body {
 }
 
 .sun {
-  filter: brightness(0) saturate(100%) invert(96%) sepia(8%) saturate(138%)
-    hue-rotate(162deg) brightness(99%) contrast(93%);
+  -webkit-filter: brightness(0) saturate(100%) invert(96%) sepia(8%)
+    saturate(138%) hue-rotate(162deg) brightness(99%) contrast(93%);
   background-image: url(./images/sun-solid-full.svg);
 }
 
@@ -112,7 +112,7 @@ textarea {
 header {
   display: flex;
   position: fixed;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   opacity: 1;
   z-index: 999;
@@ -925,5 +925,16 @@ footer {
 
   .footer-logo {
     width: 10rem;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .dark-mode {
+    --gun-metal: #e6e8e9;
+    --white: #161a1c;
+    --silver: #aeb2ad;
+    --pacific-ocean: #7f9caf;
+    --lighter-blue: #252b2f;
+    --blue-slate: #72a9cc;
   }
 }
