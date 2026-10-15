@@ -652,6 +652,20 @@ form {
   gap: 1rem;
   padding: 1.5rem;
   width: 100%;
+
+  p {
+    color: var(--gun-metal);
+  }
+
+  a {
+    transition: color 0.2s ease-in-out;
+    color: var(--blue-slate);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--silver);
+  }
 }
 
 .form-name-number {
@@ -743,6 +757,11 @@ footer {
 
 .footer-list-item a:hover {
   color: var(--silver);
+}
+
+.footer-privacy-link {
+  color: var(--lighter-blue);
+  text-decoration: none;
 }
 
 /* || Media Queries */
