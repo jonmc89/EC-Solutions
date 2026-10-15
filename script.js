@@ -1,7 +1,3 @@
-emailjs.init({
-  publicKey: 'rNNP43bprqgFovXvD',
-});
-
 // Header Hide
 
 const header = document.getElementById('header');
