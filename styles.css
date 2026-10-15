@@ -724,6 +724,10 @@ textarea:valid {
 .form-submit:hover {
   background-color: var(--pacific-ocean);
 }
+.hidden {
+  position: absolute;
+  left: -100rem;
+}
 
 /* Footer */
 

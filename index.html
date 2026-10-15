@@ -280,10 +280,17 @@
                 name="contact"
                 method="POST"
                 data-netlify="true"
+                netlify-honeypot="bot-field"
                 action="./success.html"
               >
                 <div class="form-name-number">
                   <div class="form-name">
+                    <p class="hidden">
+                      <label>
+                        Don’t fill this out if you’re human:
+                        <input name="bot-field" type="text" />
+                      </label>
+                    </p>
                     <label class="form-label" for="name">Your name</label>
                     <input
                       type="text"
