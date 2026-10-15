@@ -399,8 +399,8 @@ header {
 .repairs {
   filter: grayscale(100%);
   transition:
-    background-size 0.3s ease-in-out,
-    filter 0.3s ease-in-out;
+    background-size 1s ease-in-out,
+    filter 1s ease-in-out;
   background-image: url(./images/Repairs\ Image.webp);
   background-position: center;
   background-size: 100%;
@@ -408,7 +408,7 @@ header {
 
 .services-card:hover .repairs {
   filter: grayscale(50%);
-  background-size: 110%;
+  background-size: 105%;
 }
 
 /* Why Us Section */
@@ -941,7 +941,7 @@ footer {
   }
 
   .why-us-section:hover .why-us-img::before {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
   .why-us-text-container {
@@ -952,14 +952,14 @@ footer {
     display: block;
     position: relative;
     filter: grayscale(100%);
-    transition: filter 0.3s ease-in-out;
+    transition: filter 1s ease-in-out;
     width: 100%;
     overflow: hidden;
   }
 
   .why-us-img::before {
     position: absolute;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 1s ease-in-out;
     inset: 0;
     background-image: url(./images/Seaonal\ Image.webp);
     background-position: center;
