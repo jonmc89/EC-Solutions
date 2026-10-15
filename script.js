@@ -1,7 +1,3 @@
-emailjs.init({
-  publicKey: 'rNNP43bprqgFovXvD',
-});
-
 // Header Hide
 
 const header = document.getElementById('header');
@@ -22,9 +18,15 @@ window.addEventListener('scroll', () => {
 });
 
 const themeSwitcher = document.getElementById('darkModeBtn');
+const themeSwitcherMobile = document.getElementById('darkModeBtnMobile');
 const body = document.getElementById('body');
 
 themeSwitcher.addEventListener('click', () => {
   body.classList.toggle('dark-mode');
   themeSwitcher.classList.toggle('sun');
+});
+
+themeSwitcherMobile.addEventListener('click', () => {
+  body.classList.toggle('dark-mode');
+  themeSwitcherMobile.classList.toggle('sun');
 });
