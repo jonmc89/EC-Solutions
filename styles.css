@@ -42,7 +42,7 @@
 
 html,
 body {
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 html {
@@ -52,7 +52,7 @@ html {
 body {
   background-color: var(--white);
   min-width: 24rem;
-  overflow-x: hidden;
+  overflow-x: clip;
   font-family: 'DM Sans', Arial, Helvetica, sans-serif;
 }
 
@@ -902,14 +902,28 @@ footer {
     flex-direction: row;
   }
 
-  .section-pattern-wrapper {
-    display: flex;
-  }
-
   .services-section {
     grid-template-columns: 1fr;
+    view-timeline-name: --features-timeline;
+    view-timeline-axis: block;
   }
 
+  .section-pattern-wrapper {
+    display: flex;
+    animation: slide-in-right auto linear both;
+    animation-timeline: --features-timeline;
+    animation-range: entry 0% cover 40%;
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(20rem);
+    }
+
+    to {
+      transform: translateX(0);
+    }
+  }
   .services-card {
     height: 40rem;
   }
@@ -958,11 +972,26 @@ footer {
   .contact-section {
     display: flex;
     align-items: center;
+    view-timeline-name: --contact-timeline;
+    view-timeline-axis: block;
     height: auto;
   }
 
   .contact-pattern-wrapper {
     display: flex;
+    animation: slide-in-left auto linear both;
+    animation-timeline: --contact-timeline;
+    animation-range: entry 0% cover 40%;
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX(-20rem);
+    }
+
+    to {
+      transform: translateX(0);
+    }
   }
 
   .contact-info-container {
