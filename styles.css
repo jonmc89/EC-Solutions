@@ -652,6 +652,20 @@ form {
   gap: 1rem;
   padding: 1.5rem;
   width: 100%;
+
+  p {
+    color: var(--gun-metal);
+  }
+
+  a {
+    transition: color 0.2s ease-in-out;
+    color: var(--blue-slate);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--silver);
+  }
 }
 
 .form-name-number {
@@ -710,6 +724,10 @@ textarea:valid {
 .form-submit:hover {
   background-color: var(--pacific-ocean);
 }
+.hidden {
+  position: absolute;
+  left: -100rem;
+}
 
 /* Footer */
 
@@ -743,6 +761,43 @@ footer {
 
 .footer-list-item a:hover {
   color: var(--silver);
+}
+
+.footer-privacy-link {
+  color: var(--lighter-blue);
+  text-decoration: none;
+}
+
+/* || Success Page */
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+
+  img {
+    width: 10rem;
+    height: auto;
+  }
+
+  h1 {
+    color: var(--blue-slate);
+  }
+
+  p {
+    color: var(--gun-metal);
+  }
+
+  a {
+    transition: color 0.2s ease-in-out;
+    color: var(--blue-slate);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--pacific-ocean);
+  }
 }
 
 /* || Media Queries */
