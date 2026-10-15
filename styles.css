@@ -764,6 +764,38 @@ footer {
   text-decoration: none;
 }
 
+/* || Success Page */
+
+.success-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+
+  img {
+    width: 10rem;
+    height: auto;
+  }
+
+  h1 {
+    color: var(--blue-slate);
+  }
+
+  p {
+    color: var(--gun-metal);
+  }
+
+  a {
+    transition: color 0.2s ease-in-out;
+    color: var(--blue-slate);
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: var(--pacific-ocean);
+  }
+}
+
 /* || Media Queries */
 
 /* Tablet View */
