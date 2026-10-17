@@ -124,6 +124,8 @@ textarea {
 
 /* Header */
 
+
+
 header {
   display: flex;
   position: fixed;
@@ -185,6 +187,53 @@ header > nav {
 .header-nav-btn:hover {
   background-color: var(--pacific-ocean);
 }
+
+.mobile-menu-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-btn {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--blue-slate);
+  cursor: pointer;
+}
+
+.mobile-nav {
+  opacity: 0;
+  pointer-events: none;
+ transform: translateX(-100vw);
+  position: absolute;
+  background-color: var(--blue-slate);
+  width: 100%;
+  top: 6rem;
+  left: 0;
+  padding: 3rem;
+  text-align: center;
+  transition: translateX 0.2s ease-in, opacity 0.2s ease-in-out;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.show-mobile-nav {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.mobile-nav-link {
+  color: var(--white);
+  text-decoration: none;
+}
+
+
 
 /* Hero Section */
 
@@ -329,7 +378,7 @@ header > nav {
   display: flex;
   position: relative;
   flex-direction: column;
-  padding-top: 0;
+  padding-top: 6rem;
   padding-bottom: 3rem;
 }
 
@@ -467,6 +516,7 @@ header > nav {
   align-items: center;
   z-index: 99;
   background-color: var(--pacific-ocean);
+  padding-top: 6rem;
 }
 
 .why-us-section-dark {
@@ -565,6 +615,7 @@ h4 {
 
 .contact-section {
   position: relative;
+  padding-top: 4rem;
 }
 
 .contact-pattern-wrapper {
@@ -866,6 +917,10 @@ footer {
   }
 
   #darkModeBtnMobile {
+    display: none;
+  }
+
+  .menu-btn {
     display: none;
   }
 
