@@ -124,6 +124,8 @@ textarea {
 
 /* Header */
 
+
+
 header {
   display: flex;
   position: fixed;
@@ -156,6 +158,10 @@ header {
   list-style: none;
 }
 
+header > nav {
+  display: none;
+}
+
 .header-nav-link {
   transition: color 0.2s ease-in-out;
   cursor: pointer;
@@ -181,6 +187,53 @@ header {
 .header-nav-btn:hover {
   background-color: var(--pacific-ocean);
 }
+
+.mobile-menu-container {
+  display: flex;
+  gap: 2rem;
+}
+
+.menu-btn {
+  width: 2rem;
+  height: 2rem;
+  fill: var(--blue-slate);
+  cursor: pointer;
+}
+
+.mobile-nav {
+  opacity: 0;
+  pointer-events: none;
+ transform: translateX(-100vw);
+  position: absolute;
+  background-color: var(--blue-slate);
+  width: 100%;
+  top: 6rem;
+  left: 0;
+  padding: 3rem;
+  text-align: center;
+  transition: translateX 0.2s ease-in, opacity 0.2s ease-in-out;
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+  }
+}
+
+.show-mobile-nav {
+  transform: translateX(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+
+.mobile-nav-link {
+  color: var(--white);
+  text-decoration: none;
+}
+
+
 
 /* Hero Section */
 
@@ -325,7 +378,7 @@ header {
   display: flex;
   position: relative;
   flex-direction: column;
-  padding-top: 0;
+  padding-top: 6rem;
   padding-bottom: 3rem;
 }
 
@@ -441,6 +494,7 @@ header {
 }
 
 .services-card-img-container {
+  filter: grayscale(100%);
   border-radius: 0.5rem;
   background-color: var(--pacific-ocean);
   width: 100%;
@@ -448,18 +502,10 @@ header {
 }
 
 .repairs {
-  filter: grayscale(100%);
-  transition:
-    background-size 1s ease-in-out,
-    filter 1s ease-in-out;
+  transition: filter 1s ease-in-out;
   background-image: url(./images/Repairs\ Image.webp);
   background-position: center;
   background-size: 100%;
-}
-
-.services-card:hover .repairs {
-  filter: grayscale(50%);
-  background-size: 105%;
 }
 
 /* Why Us Section */
@@ -470,6 +516,7 @@ header {
   align-items: center;
   z-index: 99;
   background-color: var(--pacific-ocean);
+  padding-top: 6rem;
 }
 
 .why-us-section-dark {
@@ -568,6 +615,7 @@ h4 {
 
 .contact-section {
   position: relative;
+  padding-top: 4rem;
 }
 
 .contact-pattern-wrapper {
@@ -577,7 +625,7 @@ h4 {
   left: -1rem;
   align-items: end;
   gap: 1rem;
-  z-index: -1;
+  z-index: 98;
 }
 
 .contact-pattern-square-big,
@@ -752,18 +800,6 @@ select {
   -moz-appearance: none;
 }
 
-input:user-invalid,
-select:user-invalid,
-textarea:user-invalid {
-  border: 0.1rem solid red;
-}
-
-input:valid,
-select:valid,
-textarea:valid {
-  border: 0.1rem solid green;
-}
-
 .form-submit {
   transition: background-color 0.2s ease-in-out;
   cursor: pointer;
@@ -851,7 +887,27 @@ footer {
   }
 }
 
+/* Privacy Page */
+
+.privacy-section {
+  padding: 8rem 2rem 0 2rem;
+}
+
 /* || Media Queries */
+
+@media (prefers-reduced-motion: no-preference) {
+  section {
+    opacity: 0;
+    animation: fade-in linear forwards;
+    animation-timeline: view();
+    animation-range: entry 50px;
+  }
+
+  @keyframes fade-in {
+    to {
+      opacity: 1;
+    }
+  }
 
 /* Tablet View */
 
@@ -864,9 +920,18 @@ footer {
     display: none;
   }
 
+  .menu-btn {
+    display: none;
+  }
+
   .header-nav {
     display: flex;
   }
+
+  header > nav {
+    display: block;
+  }
+
   .hero-section {
     height: 100vh;
   }
@@ -936,7 +1001,8 @@ footer {
   }
 }
 
-@media screen and (min-width: 89rem) {
+/* Desktop View */
+@media screen and (min-width: 89rem) and (prefers-reduced-motion: no-preference) {
   main {
     margin-inline: auto;
   }
@@ -1004,15 +1070,8 @@ footer {
     grid-template-rows: 1fr;
     grid-template-columns: repeat(2, 1fr);
     gap: 3rem;
+    z-index: 99;
     padding: 6rem 2rem 3rem 2rem;
-  }
-
-  .why-us-section:hover .why-us-img {
-    filter: grayscale(50%);
-  }
-
-  .why-us-section:hover .why-us-img::before {
-    transform: scale(1.05);
   }
 
   .why-us-text-container {
@@ -1046,10 +1105,12 @@ footer {
     view-timeline-name: --contact-timeline;
     view-timeline-axis: block;
     height: auto;
+    overflow: clip;
   }
 
   .contact-pattern-wrapper {
     display: flex;
+    z-index: 50;
     animation: slide-in-left auto linear both;
     animation-timeline: --contact-timeline;
     animation-range: entry 0% cover 40%;
@@ -1058,10 +1119,12 @@ footer {
   @keyframes slide-in-left {
     from {
       transform: translateX(-20rem);
+      z-index: 2;
     }
 
     to {
       transform: translateX(0);
+      z-index: 2;
     }
   }
 
