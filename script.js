@@ -1,28 +1,31 @@
 const themeSwitcher = document.getElementById('darkModeBtn');
 const themeSwitcherMobile = document.getElementById('darkModeBtnMobile');
-const body = document.getElementById('body');
+const themeSwitchers = [themeSwitcher, themeSwitcherMobile].filter(Boolean);
+const body = document.body;
 
 const mobileBtn = document.getElementById('menuBtn');
 const mobileNav = document.getElementById('mobileNav');
 const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
 
-mobileBtn.addEventListener('click', () => {
-  mobileNav.classList.toggle('show-mobile-nav');
-  mobileBtn.classList.toggle('close-menu-button');
-});
-
-mobileNavLinks.forEach((link) => {
-  link.addEventListener('click', () => {
-    mobileNav.classList.remove('show-mobile-nav');
+if (mobileBtn && mobileNav) {
+  mobileBtn.addEventListener('click', () => {
+    mobileNav.classList.toggle('show-mobile-nav');
+    mobileBtn.classList.toggle('close-menu-button');
   });
-});
 
-themeSwitcher.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  themeSwitcher.classList.toggle('sun');
-});
+  mobileNavLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      mobileNav.classList.remove('show-mobile-nav');
+    });
+  });
+}
 
-themeSwitcherMobile.addEventListener('click', () => {
-  body.classList.toggle('dark-mode');
-  themeSwitcherMobile.classList.toggle('sun');
+themeSwitchers.forEach((switcher) => {
+  switcher.addEventListener('click', () => {
+    body.classList.toggle('dark-mode');
+    const isDarkMode = body.classList.contains('dark-mode');
+    themeSwitchers.forEach((themeSwitcher) => {
+      themeSwitcher.classList.toggle('sun', isDarkMode);
+    });
+  });
 });
