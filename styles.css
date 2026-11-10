@@ -890,7 +890,8 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 4rem;
-  padding: 8rem 2rem 8rem 2rem;
+  padding: 12rem 2rem 8rem 2rem;
+  max-width: 40rem;
 }
 
 .privacy-main-header {
@@ -992,6 +993,21 @@ td {
       color: var(--gun-metal);
     }
   }
+}
+
+.back-to-top {
+  transition: opacity 0.2s ease-in-out;
+  cursor: pointer;
+  border-radius: 0.625rem;
+  background-color: var(--blue-slate);
+  padding: 0.5rem 2rem;
+  width: 10rem;
+  color: var(--white);
+  text-decoration: none;
+}
+
+.back-to-top:hover {
+  opacity: 0.7;
 }
 
 /* || Media Queries */
